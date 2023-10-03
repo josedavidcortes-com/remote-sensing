@@ -1,0 +1,22 @@
+/*
+David Cortes
+david.cortes@coyotes.usd.edu
+*/
+// Search "NASA SRTM Digital Elevation 30m" then import
+//Printing data details to console
+print(srtm);
+
+// Adding the SRTM data to the interactive Map
+Map.addLayer(srtm);
+
+// Adding the data again, but with restricted value ranges for better visualization
+Map.addLayer(srtm, {min: 0, max: 400});
+
+// Adding the data again, with value ranges, and a useful title for the Layer tab
+Map.addLayer(srtm, {min: 0, max: 400}, 'Elevation above sea level');
+
+// Changing color pattern and minimum and maximum range of elevation
+Map.addLayer(srtm, {min: 0, max: 400, palette: ['blue', 'yellow', 'red']}, 'Elevation above sea level');
+
+// Changing elevation value ranges to locate some of the tallest mountains in the world
+Map.addLayer(srtm, {min: 0, max: 8000, palette: ['blue', 'yellow', 'red']}, 'Elevation above sea level');
